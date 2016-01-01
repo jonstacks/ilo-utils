@@ -4,4 +4,4 @@ ilo-utils
 
 Utilities for interacting with ILO.
 
-* Documentation: https://github.com/pages/jonstacks13/ilo-utils/
+* Documentation: https://jonstacks13.github.io/ilo-utils/
