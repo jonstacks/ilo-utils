@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='ilo-utils',
-    version='0.2.0',
+    version='0.3.0',
     description='ILO Utils',
     long_description=readme + '\n\n' + history,
     author='Jonathan Stacks',
