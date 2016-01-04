@@ -5,6 +5,17 @@ History
 =======
 
 ------------------
+0.3.0 (2016-01-04)
+------------------
+
+Features
+--------
+
+* Added a `--skip-port-check` flag to the `ilo-sweep` command. This skips the
+  initial check for the open ILO port and instead relies on whether or not
+  the REST request itself was successfull.
+
+------------------
 0.2.0 (2016-01-03)
 ------------------
 
