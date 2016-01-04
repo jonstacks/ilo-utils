@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>History &mdash; ilo-utils 0.2.0 documentation</title>
+  <title>Commands &mdash; ilo-utils 0.2.0 documentation</title>
   
 
   
@@ -31,7 +31,8 @@
 
   
     <link rel="top" title="ilo-utils 0.2.0 documentation" href="index.html"/>
-        <link rel="prev" title="Contributing" href="contributing.html"/> 
+        <link rel="next" title="Contributing" href="contributing.html"/>
+        <link rel="prev" title="ilo-utils" href="readme.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,23 +83,12 @@
             
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">ilo-utils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ilo-sweep">ilo-sweep</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">History</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">0.2.0 (2016-01-03)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">0.1.1 (2016-01-01)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">0.1.0 (2016-01-01)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Features</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
 </ul>
 
             
@@ -129,11 +119,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>History</li>
+    <li>Commands</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/history.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/commands.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -143,33 +133,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="history">
-<h1>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>0.2.0 (2016-01-03)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="features">
-<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Added more fields to <cite>ilo-sweep</cite> table.</li>
-</ul>
+  <div class="section" id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<p>After you install <cite>ilo-utils</cite>, the following commands are automatically
+made available to you:</p>
+<div class="section" id="ilo-sweep">
+<h2>ilo-sweep<a class="headerlink" href="#ilo-sweep" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>ilo-sweep</cite> command can be used to sweep a network for ILO Devices.
+It does this by first sweeping the given subnet for IPs that are listening
+on port 17988. <a class="reference external" href="http://techibee.com/hardware/how-to-find-the-ilo-details-of-remote-server/155">This</a>
+article provided that information along with other details. Once we have
+narrowed down the list of IP address that are listening, we try to get the
+ILO inventory for each host like so:</p>
+<div class="highlight-python"><div class="highlight"><pre>GET /xmldata?item=all
+</pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h2>0.1.1 (2016-01-01)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="fixes">
-<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Fixed pypi installation issues.</li>
-</ul>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>0.1.0 (2016-01-01)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id4">
-<h3>Features<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><cite>ilo-sweep</cite> command for sweeping a network for ILO devices.</li>
-</ul>
+<p>Once we have the data, we parse out the relative fields and then display the
+data in a nicely formatted table.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre>ilo-sweep 192.168.1.0/24
+ilo-sweep 192.168.1.0/24 --timeout 10
+</pre></div>
 </div>
 </div>
 </div>
@@ -181,8 +165,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="contributing.html" class="btn btn-neutral" title="Contributing" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="readme.html" class="btn btn-neutral" title="ilo-utils" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
