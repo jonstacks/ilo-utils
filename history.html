@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>History &mdash; ilo-utils 0.2.0 documentation</title>
+  <title>History &mdash; ilo-utils 0.3.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="ilo-utils 0.2.0 documentation" href="index.html"/>
+    <link rel="top" title="ilo-utils 0.3.0 documentation" href="index.html"/>
         <link rel="prev" title="Contributing" href="contributing.html"/> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.2.0
+                0.3.0
               </div>
             
           
@@ -85,16 +85,20 @@
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">History</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">0.2.0 (2016-01-03)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.3.0 (2016-01-04)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">0.1.1 (2016-01-01)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.2.0 (2016-01-03)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.1.1 (2016-01-01)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">0.1.0 (2016-01-01)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">0.1.0 (2016-01-01)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Features</a></li>
 </ul>
 </li>
 </ul>
@@ -146,16 +150,27 @@
   <div class="section" id="history">
 <h1>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>0.2.0 (2016-01-03)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>0.3.0 (2016-01-04)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="features">
 <h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added a <cite>&#8211;skip-port-check</cite> flag to the <cite>ilo-sweep</cite> command. This skips the
+initial check for the open ILO port and instead relies on whether or not
+the REST request itself was successfull.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>0.2.0 (2016-01-03)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Features<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Added more fields to <cite>ilo-sweep</cite> table.</li>
 </ul>
 </div>
 </div>
-<div class="section" id="id2">
-<h2>0.1.1 (2016-01-01)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>0.1.1 (2016-01-01)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="fixes">
 <h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -163,10 +178,10 @@
 </ul>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>0.1.0 (2016-01-01)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id4">
-<h3>Features<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h2>0.1.0 (2016-01-01)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Features<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><cite>ilo-sweep</cite> command for sweeping a network for ILO devices.</li>
 </ul>
@@ -213,7 +228,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.2.0',
+            VERSION:'0.3.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

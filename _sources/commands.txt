@@ -26,3 +26,4 @@ Usage::
 
     ilo-sweep 192.168.1.0/24
     ilo-sweep 192.168.1.0/24 --timeout 10
+    ilo-sweep 192.168.1.0/24 --skip-port-check
