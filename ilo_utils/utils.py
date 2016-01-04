@@ -32,6 +32,8 @@ class ILOInfo(threading.Thread):
         self.resp = None
         self.serial = None
         self.model = None
+        self.ilo_version = None
+        self.firmware = None
 
     def run(self):
         url = 'http://{}/xmldata?item=all'.format(self.host)
@@ -41,3 +43,6 @@ class ILOInfo(threading.Thread):
             hsi = tree.find('HSI')
             self.serial = hsi.find('SBSN').text.strip()
             self.model = hsi.find('SPN').text.strip()
+            mp = tree.find('MP')
+            self.ilo_version = mp.find('PN').text.strip()
+            self.firmware = mp.find('FWRI').text.strip()

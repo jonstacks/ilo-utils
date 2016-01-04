@@ -30,9 +30,10 @@ class Sweeper(object):
         self.timeout = timeout
         self.workers = workers
         self.ilo_hosts = []
-        self.table = PrettyTable(['IP', 'Serial', 'Model'])
-        self.table.align['Serial'] = 'r'
-        self.table.align['Model'] = 'r'
+        self.table = PrettyTable(['IP', 'Serial', 'Model', 'ILO Version',
+                                  'Firmware Version'])
+        self.table.align = 'r'
+        self.table.align['IP'] = 'l'
         self.table.sortby = 'IP'
         self.table.sort_key = lambda x: socket.inet_aton(x[0])
 
@@ -61,7 +62,8 @@ class Sweeper(object):
 
         for t in threads:
             t.join()
-            self.table.add_row([t.host, t.serial, t.model])
+            self.table.add_row([t.host, t.serial, t.model, t.ilo_version,
+                                t.firmware])
 
     def sweep(self):
         self._determine_ilo_hosts()
