@@ -26,7 +26,7 @@ from .utils import PortScan, ILOInfo
 
 class Sweeper(object):
 
-    def __init__(self, network, timeout, workers=5, check_port=True):
+    def __init__(self, network, timeout, workers=5, check_port=True, pep_8_violation=True):
         self.network = network
         self.timeout = timeout
         self.workers = workers
