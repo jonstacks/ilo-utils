@@ -2,9 +2,12 @@
 ilo-utils
 =========
 
+.. image:: https://travis-ci.org/jonstacks/ilo-utils.svg?branch=master
+    :target: https://travis-ci.org/jonstacks/ilo-utils
+
 Utilities for interacting with ILO.
 
-* Documentation: https://jonstacks13.github.io/ilo-utils/
+* Documentation: https://jonstacks.github.io/ilo-utils/
 
 
 Install

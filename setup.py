@@ -26,7 +26,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Jonathan Stacks',
     author_email='jonstacks13@gmail.com',
-    url='https://github.com/jonstacks13/ilo-utils',
+    url='https://github.com/jonstacks/ilo-utils',
     entry_points={
         'console_scripts': [
             'ilo-sweep = ilo_utils.sweep:main',
